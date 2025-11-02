@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>마스크팩 : 당신의 선택</title>
+    <style>
+        /* 기본 설정 */
+        body {
+            font-family: 'Malgun Gothic', 'Apple SD Gothic Neo', sans-serif;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+
+        /* 메인 컨테이너: 배경 이미지 설정 */
+        .landing-container {
+            position: relative;
+            /* 🔴 수정: 가로폭을 브라우저에 맞게 100%로 설정 */
+            width: 100%; 
+            /* 이미지 전체를 감쌀 수 있도록 높이를 충분히 길게 설정 (4000px 유지) */
+            height: 4000px; 
+            margin: 0 auto; /* 중앙 정렬 */
+            
+            /* 배경 이미지 설정 (파일명: '랜딩.png' 유지) */
+            background-image: url('landing.png'); 
+            /* 🔴 수정: 이미지가 가로폭에 맞게 축소/확대되도록 contain 설정 */
+            background-size: contain; 
+            background-repeat: no-repeat;
+            background-position: top center;
+        }
+
+        /* CTA 버튼 스타일 */
+        .cta-button {
+            position: absolute;
+            /* 위치 유지: top: 3800px 유지 */
+            top: 3800px; 
+            left: 50%;
+            transform: translateX(-50%);
+            display: inline-block;
+            
+            /* 💡 버튼 디자인 유지: 크게! */
+            background-color: #ffcc00; 
+            color: #333;
+            font-weight: bold;
+            /* 패딩 유지 */
+            padding: 18px 60px; 
+            border-radius: 30px; 
+            text-decoration: none;
+            /* 폰트 크기 유지 */
+            font-size: 1.4em; 
+            border: none;
+            cursor: pointer;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+            transition: background-color 0.3s;
+            z-index: 10;
+        }
+        .cta-button:hover {
+            background-color: #ffdb4d;
+        }
+    </style>
+</head>
+<body>
+    <div class="landing-container">
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSfxoEpNYxDBaq8NRAKTVf2aetpSNHvnELG5RxE5CRiBVQdQgg/viewform?usp=dialog" class="cta-button">지금 바로 회원가입</a>
+    </div>
+</body>
+</html>
